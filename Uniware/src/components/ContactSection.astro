@@ -1,0 +1,326 @@
+---
+// Contact Section component
+---
+
+<section id="contacto" class="section contact-section">
+  <div class="container">
+    <div class="contact-content">
+      <div class="contact-info">
+        <h2 class="section-title">
+          ¿Listo para 
+          <span class="highlight">digitalizar tu negocio?</span>
+        </h2>
+        
+        <p class="section-description">
+          Déjanos tus datos y uno de nuestros expertos se pondrá en contacto 
+          contigo para ayudarte a elegir la mejor solución para tu negocio.
+        </p>
+
+        <div class="contact-features">
+          <div class="feature">
+            <div class="feature-icon">📞</div>
+            <div class="feature-text">
+              <h3>Consulta gratuita</h3>
+              <p>Analizamos tu caso sin costo alguno</p>
+            </div>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">⚡</div>
+            <div class="feature-text">
+              <h3>Respuesta rápida</h3>
+              <p>Te contactamos en menos de 24 horas</p>
+            </div>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">🎯</div>
+            <div class="feature-text">
+              <h3>Propuesta personalizada</h3>
+              <p>Solución diseñada específicamente para ti</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-container">
+        <form class="contact-form" id="contact-form">
+          <div class="form-header">
+            <h3>Solicitar asesoría</h3>
+            <p>Completa el formulario y comencemos a trabajar juntos</p>
+          </div>
+
+          <div class="form-group">
+            <label for="nombre">Nombre completo *</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Correo electrónico *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="negocio">Nombre del negocio *</label>
+            <input type="text" id="negocio" name="negocio" required>
+          </div>
+
+          <div class="form-group">
+            <label for="necesidad">¿Qué necesitas? *</label>
+            <select id="necesidad" name="necesidad" required>
+              <option value="">Selecciona una opción</option>
+              <option value="pagina-web">Página web informativa</option>
+              <option value="app-web">Aplicación web personalizada</option>
+              <option value="sistema-admin">Sistema administrativo</option>
+              <option value="mantenimiento">Soporte y mantenimiento</option>
+              <option value="otro">Otro (especificar en mensaje)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="mensaje">Cuéntanos más sobre tu proyecto</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe brevemente qué necesitas y cualquier detalle importante..."></textarea>
+          </div>
+
+          <button type="submit" class="btn submit-btn">
+            <span class="btn-text">Solicitar asesoría</span>
+            <span class="btn-loading" style="display: none;">Enviando...</span>
+          </button>
+
+          <p class="form-note">
+            * Campos obligatorios. Nos comprometemos a proteger tu privacidad y 
+            no compartir tu información con terceros.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact-section {
+    background: var(--background);
+  }
+
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .section-title {
+    margin-bottom: 1.5rem;
+  }
+
+  .highlight {
+    color: var(--primary-color);
+    position: relative;
+  }
+
+  .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(135deg, var(--primary-light), var(--accent-color));
+    border-radius: 2px;
+  }
+
+  .section-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    color: var(--text-secondary);
+  }
+
+  .contact-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .feature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--surface);
+    border-radius: 0.75rem;
+    transition: transform 0.3s ease;
+  }
+
+  .feature:hover {
+    transform: translateX(5px);
+  }
+
+  .feature-icon {
+    font-size: 1.5rem;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-light);
+    border-radius: 50%;
+  }
+
+  .feature-text h3 {
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+  }
+
+  .feature-text p {
+    color: var(--text-secondary);
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .contact-form-container {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(8, 145, 178, 0.1);
+  }
+
+  .form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .form-header h3 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .form-header p {
+    color: var(--text-secondary);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.875rem;
+    border: 2px solid var(--border);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: inherit;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.1);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(8, 145, 178, 0.3);
+  }
+
+  .submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .btn-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .form-note {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 768px) {
+    .contact-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .contact-form-container {
+      padding: 1.5rem;
+    }
+
+    .feature {
+      text-align: left;
+    }
+  }
+</style>
+
+{/*
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form');
+    const submitBtn = form?.querySelector('.submit-btn');
+    const btnText = submitBtn?.querySelector('.btn-text');
+    const btnLoading = submitBtn?.querySelector('.btn-loading');
+
+    if (form && submitBtn && btnText && btnLoading) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // Simulate form submission
+        submitBtn.disabled = true;
+        btnText.style.display = 'none';
+        btnLoading.style.display = 'inline';
+        
+        // Simulate API call delay
+        setTimeout(() => {
+          alert('¡Gracias por tu interés! Nos pondremos en contacto contigo pronto.');
+          form.reset();
+          
+          submitBtn.disabled = false;
+          btnText.style.display = 'inline';
+          btnLoading.style.display = 'none';
+        }, 2000);
+      });
+    }
+  });
+</script>
+*/}

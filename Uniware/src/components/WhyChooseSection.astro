@@ -1,0 +1,293 @@
+---
+// Why Choose Us Section component
+---
+
+<section id="por-que-elegir" class="section why-choose-section">
+  <div class="container">
+    <div class="why-choose-content">
+      <div class="content-text">
+        <h2 class="section-title">
+          <span class="highlight">Tecnología que potencia</span> 
+          tu crecimiento
+        </h2>
+        
+        <p class="section-description">
+          Trabajamos con emprendedores, pequeñas empresas y comercios que desean 
+          digitalizar su operación, automatizar tareas y tener una presencia 
+          profesional en internet. Desde una panadería local hasta un despacho 
+          de abogados, adaptamos cada solución al contexto real del cliente.
+        </p>
+
+        <div class="benefits-list">
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <span class="icon">🎯</span>
+            </div>
+            <div class="benefit-content">
+              <h3>Soluciones 100% personalizadas</h3>
+              <p>Cada proyecto se desarrolla específicamente para tus necesidades y objetivos únicos.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <span class="icon">🤝</span>
+            </div>
+            <div class="benefit-content">
+              <h3>Trato directo y acompañamiento constante</h3>
+              <p>Comunicación directa con nuestro equipo y seguimiento en cada etapa del proyecto.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <span class="icon">💰</span>
+            </div>
+            <div class="benefit-content">
+              <h3>Precios competitivos para pymes</h3>
+              <p>Tarifas justas y transparentes diseñadas especialmente para pequeños y medianos negocios.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <span class="icon">📈</span>
+            </div>
+            <div class="benefit-content">
+              <h3>Compromiso con la calidad y escalabilidad</h3>
+              <p>Desarrollo robusto que crece con tu negocio y mantiene altos estándares de calidad.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-section">
+          <h3 class="cta-title">Ideal para dueños de negocios que quieren ir al siguiente nivel</h3>
+          <a href="#contacto" class="btn">Comienza tu transformación digital</a>
+        </div>
+      </div>
+
+      <div class="content-visual">
+        <div class="visual-card">
+          <img src="/img/peoplewithboard.jpg" alt="Equipo trabajando en estrategia" class="visual-image" />
+          <div class="card-overlay">
+            <div class="success-metrics">
+              <div class="metric">
+                <span class="metric-number">100%</span>
+                <span class="metric-label">Personalización</span>
+              </div>
+              <div class="metric">
+                <span class="metric-number">24/7</span>
+                <span class="metric-label">Soporte</span>
+              </div>
+              <div class="metric">
+                <span class="metric-number">∞</span>
+                <span class="metric-label">Escalabilidad</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .why-choose-section {
+    background: var(--surface);
+  }
+
+  .why-choose-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .section-title {
+    margin-bottom: 1.5rem;
+  }
+
+  .highlight {
+    color: var(--primary-color);
+    position: relative;
+  }
+
+  .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(135deg, var(--primary-light), var(--accent-color));
+    border-radius: 2px;
+  }
+
+  .section-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    color: var(--text-secondary);
+  }
+
+  .benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 10px rgba(8, 145, 178, 0.08);
+    transition: all 0.3s ease;
+  }
+
+  .benefit-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 8px 25px rgba(8, 145, 178, 0.15);
+  }
+
+  .benefit-icon {
+    min-width: 3.5rem;
+    height: 3.5rem;
+    background: linear-gradient(135deg, var(--primary-light), var(--accent-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(8, 145, 178, 0.2);
+  }
+
+  .icon {
+    font-size: 1.5rem;
+  }
+
+  .benefit-content h3 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .benefit-content p {
+    color: var(--text-secondary);
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    color: white;
+  }
+
+  .cta-title {
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  .cta-section .btn {
+    background: white;
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+
+  .cta-section .btn:hover {
+    background: var(--surface);
+    transform: translateY(-2px);
+  }
+
+  .content-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .visual-card {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(8, 145, 178, 0.2);
+    max-width: 400px;
+  }
+
+  .visual-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(
+      to top,
+      rgba(8, 145, 178, 0.95) 0%,
+      rgba(8, 145, 178, 0.8) 60%,
+      transparent 100%
+    );
+    padding: 1.5rem;
+  }
+
+  .success-metrics {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+
+  .metric {
+    text-align: center;
+    color: white;
+  }
+
+  .metric-number {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  .metric-label {
+    font-size: 0.8rem;
+    opacity: 0.9;
+  }
+
+  @media (max-width: 768px) {
+    .why-choose-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .content-visual {
+      order: -1;
+    }
+
+    .visual-card {
+      max-width: 100%;
+    }
+
+    .visual-image {
+      height: 250px;
+    }
+
+    .benefit-item:hover {
+      transform: translateY(-2px);
+    }
+
+    .success-metrics {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+</style>

@@ -1,0 +1,238 @@
+---
+// Services Section component
+---
+
+<section id="servicios" class="section services-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">
+        Soluciones tecnológicas para 
+        <span class="highlight">cada etapa de tu negocio</span>
+      </h2>
+      <p class="section-subtitle">
+        Ofrecemos un conjunto completo de servicios diseñados para impulsar 
+        tu transformación digital y optimizar tus procesos empresariales.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-image">
+          <img src="/img/keyboardlaptop.jpg" alt="Desarrollo web" />
+          <div class="service-icon">🌐</div>
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">Desarrollo de páginas web informativas</h3>
+          <p class="service-description">
+            Refuerza tu presencia en línea con un sitio atractivo y profesional 
+            que transmita confianza y genere conversiones.
+          </p>
+          <ul class="service-features">
+            <li>Diseño responsive y moderno</li>
+            <li>Optimización SEO</li>
+            <li>Integración con redes sociales</li>
+            <li>Panel de administración</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-image">
+          <img src="/img/peoplewithlaptop.jpg" alt="Aplicaciones web" />
+          <div class="service-icon">⚡</div>
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">Aplicaciones web personalizadas</h3>
+          <p class="service-description">
+            Automatiza y digitaliza procesos internos de tu negocio con 
+            aplicaciones web hechas específicamente para tus necesidades.
+          </p>
+          <ul class="service-features">
+            <li>Automatización de procesos</li>
+            <li>Interfaces intuitivas</li>
+            <li>Integración con APIs</li>
+            <li>Escalabilidad garantizada</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-image">
+          <img src="/img/peopleindesktop.jpg" alt="Sistemas administrativos" />
+          <div class="service-icon">📊</div>
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">Sistemas administrativos y de control</h3>
+          <p class="service-description">
+            Mejora la gestión de inventarios, ventas o empleados con sistemas 
+            hechos a tu medida que optimizan la operación diaria.
+          </p>
+          <ul class="service-features">
+            <li>Gestión de inventarios</li>
+            <li>Control de ventas</li>
+            <li>Reportes y analytics</li>
+            <li>Gestión de usuarios</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-image">
+          <img src="/img/security.jpg" alt="Soporte y mantenimiento" />
+          <div class="service-icon">🛠️</div>
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">Soporte y mantenimiento continuo</h3>
+          <p class="service-description">
+            Te acompañamos antes, durante y después del desarrollo con 
+            soporte técnico especializado y actualizaciones regulares.
+          </p>
+          <ul class="service-features">
+            <li>Soporte técnico 24/7</li>
+            <li>Actualizaciones de seguridad</li>
+            <li>Monitoreo de rendimiento</li>
+            <li>Backups automáticos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .services-section {
+    background: var(--background);
+  }
+
+  .section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-top: 1rem;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .service-card {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(8, 145, 178, 0.08);
+    transition: all 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(8, 145, 178, 0.15);
+  }
+
+  .service-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .service-card:hover .service-image img {
+    transform: scale(1.1);
+  }
+
+  .service-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .service-content {
+    padding: 1.5rem;
+  }
+
+  .service-title {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .service-description {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .service-features li {
+    position: relative;
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+  }
+
+  .service-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+
+  .highlight {
+    color: var(--primary-color);
+    position: relative;
+  }
+
+  .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(135deg, var(--primary-light), var(--accent-color));
+    border-radius: 2px;
+  }
+
+  @media (max-width: 768px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .service-image {
+      height: 180px;
+    }
+
+    .section-header {
+      text-align: center;
+    }
+  }
+</style>
