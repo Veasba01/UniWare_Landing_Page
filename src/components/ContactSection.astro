@@ -277,6 +277,38 @@
     line-height: 1.4;
   }
 
+  .form-message {
+    margin-top: 1rem;
+    padding: 0.875rem;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    text-align: center;
+    animation: slideIn 0.3s ease;
+  }
+
+  .form-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+
+  .form-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   @media (max-width: 768px) {
     .contact-content {
       grid-template-columns: 1fr;
@@ -293,34 +325,77 @@
   }
 </style>
 
-{/*
 <script>
+  import emailjs from '@emailjs/browser';
+
   document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('contact-form');
-    const submitBtn = form?.querySelector('.submit-btn');
-    const btnText = submitBtn?.querySelector('.btn-text');
-    const btnLoading = submitBtn?.querySelector('.btn-loading');
+    // Inicializar EmailJS con tu Public Key
+    emailjs.init('700uuHboIsDQ0w9l2'); // Reemplaza con tu Public Key de EmailJS
+
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const submitBtn = form?.querySelector('.submit-btn') as HTMLButtonElement;
+    const btnText = submitBtn?.querySelector('.btn-text') as HTMLElement;
+    const btnLoading = submitBtn?.querySelector('.btn-loading') as HTMLElement;
 
     if (form && submitBtn && btnText && btnLoading) {
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
         
-        // Simulate form submission
+        // Deshabilitar el botón y mostrar loading
         submitBtn.disabled = true;
         btnText.style.display = 'none';
         btnLoading.style.display = 'inline';
         
-        // Simulate API call delay
-        setTimeout(() => {
-          alert('¡Gracias por tu interés! Nos pondremos en contacto contigo pronto.');
+        try {
+          // Enviar el formulario usando EmailJS
+          const result = await emailjs.sendForm(
+            'service_b3iuchj',    // Reemplaza con tu Service ID
+            'template_1pe2tol',   // Reemplaza con tu Template ID
+            form
+          );
+          
+          console.log('Correo enviado exitosamente:', result.text);
+          
+          // Mostrar mensaje de éxito
+          showMessage('¡Gracias por tu interés! Nos pondremos en contacto contigo pronto.', 'success');
           form.reset();
           
+        } catch (error) {
+          console.error('Error al enviar el correo:', error);
+          showMessage('Hubo un error al enviar tu mensaje. Por favor, intenta nuevamente.', 'error');
+        } finally {
+          // Restaurar el botón
           submitBtn.disabled = false;
           btnText.style.display = 'inline';
           btnLoading.style.display = 'none';
-        }, 2000);
+        }
       });
+    }
+
+    // Función para mostrar mensajes al usuario
+    function showMessage(message: string, type: string) {
+      // Remover mensaje anterior si existe
+      const existingMessage = document.querySelector('.form-message');
+      if (existingMessage) {
+        existingMessage.remove();
+      }
+
+      // Crear nuevo mensaje
+      const messageDiv = document.createElement('div');
+      messageDiv.className = `form-message ${type}`;
+      messageDiv.textContent = message;
+      
+      // Insertar el mensaje después del botón
+      if (submitBtn && submitBtn.parentNode) {
+        submitBtn.parentNode.insertBefore(messageDiv, submitBtn.nextSibling);
+      }
+      
+      // Remover el mensaje después de 5 segundos
+      setTimeout(() => {
+        if (messageDiv.parentNode) {
+          messageDiv.remove();
+        }
+      }, 5000);
     }
   });
 </script>
-*/}
