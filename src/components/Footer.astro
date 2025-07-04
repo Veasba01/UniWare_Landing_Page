@@ -6,7 +6,9 @@
   <div class="container">
     <div class="footer-content">
       <div class="footer-brand">
-        <h3 class="brand-title">UniWare</h3>
+        <div class="brand-logo-container">
+          <h3 class="brand-title">UniWare</h3>
+        </div>
         <p class="brand-description">
           Transformamos ideas en soluciones tecnológicas que impulsan el crecimiento 
           de tu negocio.
@@ -56,15 +58,15 @@
           <ul class="link-list">
             <li class="contact-item">
               <span class="contact-icon">📧</span>
-              <span>contacto@uniware.com</span>
+              <span>uniwarecr@gmail.com</span>
             </li>
             <li class="contact-item">
               <span class="contact-icon">📱</span>
-              <span>+506 1234-5678</span>
+              <span>+506 7003-6757</span>
             </li>
             <li class="contact-item">
               <span class="contact-icon">📍</span>
-              <span>Guanacaste, Costa Rica</span>
+              <span>Nicoya, Guanacaste, Costa Rica</span>
             </li>
           </ul>
         </div>
@@ -103,10 +105,22 @@
     max-width: 350px;
   }
 
+  .brand-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-logo {
+    height: 3rem;
+    width: auto;
+  }
+
   .brand-title {
     font-size: 1.75rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin: 0;
     background: linear-gradient(135deg, var(--primary-light), var(--accent-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -227,6 +241,14 @@
   @media (max-width: 768px) {
     .footer {
       padding: 2rem 0 1rem;
+    }
+
+    .footer-logo {
+      height: 2rem;
+    }
+
+    .brand-title {
+      font-size: 1.5rem;
     }
 
     .footer-content {

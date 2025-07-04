@@ -6,7 +6,8 @@
   <nav class="nav container">
     <div class="nav-brand">
       <a href="#hero" class="brand-link">
-        <span class="brand-text">UniWare</span>
+        <img src="/img/logo.png" alt="UniWare Logo" class="brand-logo">
+        
       </a>
     </div>
     
@@ -67,6 +68,19 @@
     text-decoration: none;
     color: var(--primary-color);
     transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .brand-logo {
+    height: 6rem;
+    width: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .brand-link:hover .brand-logo {
+    transform: scale(1.05);
   }
 
   .brand-link:hover {
@@ -136,6 +150,14 @@
   }
 
   @media (max-width: 768px) {
+    .brand-logo {
+      height: 2rem;
+    }
+
+    .brand-text {
+      font-size: 1.2rem;
+    }
+
     .nav-menu {
       position: fixed;
       top: 4rem;
