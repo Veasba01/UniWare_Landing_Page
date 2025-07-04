@@ -1,0 +1,71 @@
+---
+// Breadcrumbs component for SEO and navigation
+export interface Props {
+  items: Array<{
+    text: string;
+    href?: string;
+  }>;
+}
+
+const { items } = Astro.props;
+---
+
+<nav aria-label="Breadcrumb" class="breadcrumb-nav">
+  <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+    {items.map((item, index) => (
+      <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        {item.href ? (
+          <a href={item.href} itemprop="item">
+            <span itemprop="name">{item.text}</span>
+          </a>
+        ) : (
+          <span itemprop="name" aria-current="page">{item.text}</span>
+        )}
+        <meta itemprop="position" content={String(index + 1)} />
+        {index < items.length - 1 && <span class="separator" aria-hidden="true">›</span>}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<style>
+  .breadcrumb-nav {
+    padding: 1rem 0;
+    background: var(--surface);
+  }
+  
+  .breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+  }
+  
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .breadcrumb-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .breadcrumb-item a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+  }
+  
+  .breadcrumb-item [aria-current="page"] {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+  
+  .separator {
+    margin: 0 0.5rem;
+    color: var(--text-secondary);
+  }
+</style>

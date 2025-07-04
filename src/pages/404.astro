@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+  <Header />
+  <main>
+    <section class="error-section">
+      <div class="container">
+        <div class="error-content">
+          <h1>404 - Página no encontrada</h1>
+          <p>Lo sentimos, la página que buscas no existe o ha sido movida.</p>
+          <p>Puedes volver al <a href="/">inicio</a> o explorar nuestros servicios:</p>
+          <ul>
+            <li><a href="/#servicios">Servicios de desarrollo web</a></li>
+            <li><a href="/#quienes-somos">Acerca de UniWare</a></li>
+            <li><a href="/#contacto">Contacto</a></li>
+          </ul>
+          <a href="/" class="btn">Ir al inicio</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .error-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .error-content h1 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .error-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+  }
+  
+  .error-content li {
+    margin: 0.5rem 0;
+  }
+  
+  .error-content a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  .error-content a:hover {
+    text-decoration: underline;
+  }
+</style>

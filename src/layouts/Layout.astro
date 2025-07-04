@@ -4,10 +4,181 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="manifest" href="/manifest.json" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="UniWare - Desarrollo de software y soluciones digitales a medida para negocios" />
-		<title>UniWare - Soluciones Digitales a Medida</title>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		
+		<!-- SEO Meta Tags -->
+		<title>UniWare Costa Rica - Desarrollo Web y Software a Medida | uniwarecr.com</title>
+		<meta name="description" content="Desarrollo de páginas web, aplicaciones web y software personalizado en Costa Rica. Transformamos tu idea en soluciones tecnológicas funcionales. Más de 50 proyectos completados con 98% de satisfacción." />
+		<meta name="keywords" content="desarrollo web costa rica, desarrollo software costa rica, aplicaciones web, páginas web personalizadas, UniWare, desarrollo a medida, transformación digital, software empresarial" />
+		<meta name="author" content="UniWare Costa Rica" />
+		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+		
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://uniwarecr.com/" />
+		
+		<!-- Open Graph Meta Tags -->
+		<meta property="og:title" content="UniWare Costa Rica - Desarrollo Web y Software a Medida" />
+		<meta property="og:description" content="Transformamos tu idea en soluciones tecnológicas funcionales. Desarrollo web y software personalizado en Costa Rica con más de 50 proyectos completados." />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://uniwarecr.com/" />
+		<meta property="og:image" content="https://uniwarecr.com/img/logo.png" />
+		<meta property="og:image:alt" content="UniWare Costa Rica - Logo" />
+		<meta property="og:site_name" content="UniWare Costa Rica" />
+		<meta property="og:locale" content="es_CR" />
+		
+		<!-- Twitter Card Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="UniWare Costa Rica - Desarrollo Web y Software a Medida" />
+		<meta name="twitter:description" content="Transformamos tu idea en soluciones tecnológicas funcionales. Desarrollo web y software personalizado en Costa Rica." />
+		<meta name="twitter:image" content="https://uniwarecr.com/img/logo.png" />
+		<meta name="twitter:image:alt" content="UniWare Costa Rica - Logo" />
+		
+		<!-- Additional SEO Meta Tags -->
+		<meta name="theme-color" content="#0891b2" />
+		<meta name="msapplication-TileColor" content="#0891b2" />
+		<meta name="geo.region" content="CR" />
+		<meta name="geo.placename" content="Costa Rica" />
+		<meta name="ICBM" content="9.7489,-83.7534" />
+		
+		<!-- Preload critical resources -->
+		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+		
+		<!-- Preconnect to external domains -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		
+		<!-- DNS-Prefetch for performance -->
+		<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+		
+		<!-- Structured Data - Organization -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "UniWare Costa Rica",
+			"url": "https://uniwarecr.com",
+			"logo": "https://uniwarecr.com/img/logo.png",
+			"description": "Empresa de desarrollo web y software personalizado en Costa Rica",
+			"address": {
+				"@type": "PostalAddress",
+				"addressCountry": "CR",
+				"addressRegion": "Costa Rica"
+			},
+			"contactPoint": {
+				"@type": "ContactPoint",
+				"contactType": "customer service",
+				"availableLanguage": "Spanish"
+			},
+			"sameAs": [],
+			"founder": {
+				"@type": "Person",
+				"name": "UniWare Team"
+			},
+			"numberOfEmployees": "10-50",
+			"foundingDate": "2020",
+			"areaServed": {
+				"@type": "Country",
+				"name": "Costa Rica"
+			}
+		}
+		</script>
+		
+		<!-- Structured Data - WebSite -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": "UniWare Costa Rica",
+			"url": "https://uniwarecr.com",
+			"description": "Desarrollo de páginas web y software personalizado en Costa Rica",
+			"inLanguage": "es-CR",
+			"author": {
+				"@type": "Organization",
+				"name": "UniWare Costa Rica"
+			}
+		}
+		</script>
+		
+		<!-- Structured Data - Service -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Service",
+			"name": "Desarrollo Web y Software Personalizado",
+			"description": "Servicios de desarrollo web, aplicaciones web y software a medida para empresas en Costa Rica",
+			"provider": {
+				"@type": "Organization",
+				"name": "UniWare Costa Rica",
+				"url": "https://uniwarecr.com"
+			},
+			"areaServed": {
+				"@type": "Country",
+				"name": "Costa Rica"
+			},
+			"serviceType": "Desarrollo de Software",
+			"offers": {
+				"@type": "Offer",
+				"availability": "https://schema.org/InStock",
+				"priceCurrency": "CRC"
+			}
+		}
+		</script>
+		
+		<!-- Google Analytics / Google Tag Manager (Descomenta cuando tengas los IDs) -->
+		<!--
+		<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'GA_TRACKING_ID');
+		</script>
+		-->
+		
+		<!-- Schema.org LocalBusiness (para mejorar SEO local) -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "LocalBusiness",
+			"name": "UniWare Costa Rica",
+			"image": "https://uniwarecr.com/img/logo.png",
+			"@id": "https://uniwarecr.com",
+			"url": "https://uniwarecr.com",
+			"telephone": "+506-XXXX-XXXX",
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "Tu dirección aquí",
+				"addressLocality": "San José",
+				"addressRegion": "San José",
+				"postalCode": "10101",
+				"addressCountry": "CR"
+			},
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": 9.7489,
+				"longitude": -83.7534
+			},
+			"openingHoursSpecification": {
+				"@type": "OpeningHoursSpecification",
+				"dayOfWeek": [
+					"Monday",
+					"Tuesday", 
+					"Wednesday",
+					"Thursday",
+					"Friday"
+				],
+				"opens": "08:00",
+				"closes": "17:00"
+			},
+			"sameAs": [
+				"https://www.facebook.com/uniwarecr",
+				"https://www.linkedin.com/company/uniwarecr",
+				"https://www.instagram.com/uniwarecr"
+			]
+		}
+		</script>
 	</head>
 	<body>
 		<slot />
@@ -43,6 +214,7 @@
 		line-height: 1.6;
 		color: var(--text-primary);
 		background-color: var(--background);
+		font-display: swap; /* Improve font loading performance */
 	}
 
 	.container {
@@ -114,6 +286,28 @@
 	.btn-secondary:hover {
 		background: var(--primary-color);
 		color: white;
+	}
+
+	/* Improve image loading performance */
+	img {
+		max-width: 100%;
+		height: auto;
+		font-style: italic;
+		background-repeat: no-repeat;
+		background-size: cover;
+		shape-margin: 0.75rem;
+	}
+
+	/* Reduce layout shift */
+	* {
+		box-sizing: border-box;
+	}
+
+	/* Optimize for Core Web Vitals */
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 2rem;
 	}
 
 	@media (max-width: 768px) {
